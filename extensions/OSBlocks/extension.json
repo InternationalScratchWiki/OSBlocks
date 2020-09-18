@@ -1,0 +1,8 @@
+{
+	"AutoloadClasses": {
+		"OSBlocks": "osblocks.php"
+	},
+	"Hooks": {
+		"userCan": "OSBlocks::onuserCan"
+	}
+}
