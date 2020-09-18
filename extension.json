@@ -1,6 +1,6 @@
 {
 	"name": "OSBlocks",
-	"authors": ["Naleksuh", "Jacob G. (jvvg)"],
+	"authors": ["Nick A. (Naleksuh)", "Jacob G. (jvvg)"],
 	"AutoloadClasses": {
 		"OSBlocks": "osblocks.php"
 	},
