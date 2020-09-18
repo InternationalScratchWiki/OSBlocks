@@ -5,6 +5,6 @@
 		"OSBlocks": "osblocks.php"
 	},
 	"Hooks": {
-		"userCan": "OSBlocks::onuserCan"
+		"userCan": "OSBlocks::onUserCan"
 	}
 }
