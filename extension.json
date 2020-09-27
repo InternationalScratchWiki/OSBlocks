@@ -6,5 +6,6 @@
 	},
 	"Hooks": {
 		"userCan": "OSBlocks::onUserCan"
-	}
+	},
+	"manifest_version": 1
 }
