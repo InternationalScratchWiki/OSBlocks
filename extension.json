@@ -1,11 +1,12 @@
 {
+	"manifest_version": 1,
 	"name": "OSBlocks",
 	"author": ["Nick A. (Naleksuh)", "Jacob G. (jvvg)"],
 	"AutoloadClasses": {
 		"OSBlocks": "osblocks.php"
 	},
 	"Hooks": {
-		"userCan": "OSBlocks::onUserCan"
+		"getUserPermissionsErrors": "OSBlocks::onGetUserPermissionsErrors"
 	},
 	"manifest_version": 1
 }
