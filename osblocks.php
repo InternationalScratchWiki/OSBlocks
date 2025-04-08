@@ -14,14 +14,30 @@ class OSBlocks {
 		return true;
 	}
 	
+	public static function onApiCheckCanExecute($module, $user, &$message) {
+		if (!$user->isAllowed('block') && self::isBlockListApi($module)) {
+			$message = 'badaccess';
+		
+			return false;
+		}
+		
+		return true;
+	}
+	
+	private static function isBlockListApi($module) {
+		$params = $module->extractRequestParams();
+				
+		return isset($params['list']) && in_array('blocks', $params['list']);
+	}
+	
 	private static function isDisallowedSpecialPage($title) {
 		return !empty(
-		array_filter(
-			self::disallowedSpecialPages, 
-			function ($disallowedTitle) use($title) {
-				return $title->isSpecial($disallowedTitle); 
-			}
-		)
-	);
+			array_filter(
+				self::disallowedSpecialPages, 
+				function ($disallowedTitle) use($title) {
+					return $title->isSpecial($disallowedTitle); 
+				}
+			)
+		);
 	}
 }

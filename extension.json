@@ -6,7 +6,8 @@
 		"OSBlocks": "osblocks.php"
 	},
 	"Hooks": {
-		"getUserPermissionsErrors": "OSBlocks::onGetUserPermissionsErrors"
+		"getUserPermissionsErrors": "OSBlocks::onGetUserPermissionsErrors",
+		"ApiCheckCanExecute": "OSBlocks::onApiCheckCanExecute"
 	},
 	"manifest_version": 1
 }
